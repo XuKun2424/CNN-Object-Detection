@@ -141,5 +141,5 @@ while True:
     font = cv2.FONT_HERSHEY_SIMPLEX
     cv2.putText(data[0], label, (x1, y1-5), font,0.7, (255, 255, 255), 2, cv2.LINE_AA)
     cv2.imshow('drawing', data[0])
-    cv2.waitKey(40000)
+    cv2.waitKey(4000)
     cv2.destroyAllWindows()
