@@ -3,7 +3,6 @@
 # @Author  : XuKun
 # **************************
 import numpy as np
-import pandas as pd
 import cv2
 import os
 import keras
@@ -100,15 +99,7 @@ else :
     pass
 
 data=np.zeros(shape=(1,312,416,3),dtype=np.uint8)
-# for i in range(0,305):
-#     imgname='train_mini/'+str(i)+'.jpg'
-#     img=cv2.imread(imgname)
-#     img=np.array(img)
-#     data[i]=img
-# data=data/255
-# labels=pd.read_csv('labels_ordered.csv')
-# print(model.predict(data[:5]))
-# print(labels[:5])
+
 print("************作者：徐昆\n"
       "************领域：目标检测\n"
       "************使用方法：输入一个数字（代表照片的编号）后按下回车，程序会识别出目标的位置以及方向，输入小写字母s停止运行。\n"
@@ -118,14 +109,9 @@ while True:
     if imagename=='s':
         break
     try:
-        path = 'train_mini/'+imagename+'.jpg'
+        path = 'data/'+imagename+'.jpg'
         img = cv2.imread(path)
         data[0] = img
-        # print(img.shape)
-        # img = cv2.resize(img, dsize=(shape[1], shape[0]))
-        # cv2.imshow('original', img)
-        # cv2.waitKey(0)
-        # cv2.destroyAllWindows()
     except:
         print("请输入正确的编号！")
         continue
@@ -143,3 +129,4 @@ while True:
     cv2.imshow('drawing', data[0])
     cv2.waitKey(4000)
     cv2.destroyAllWindows()
+    
