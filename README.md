@@ -16,7 +16,8 @@ A example of Objection Detection using CNN
   predict.py: 如果你已经训练好了模型，或者直接使用我们的模型，那么你可以运行该程序查看效果。
   
 3 如果你想直接使用我们训练好的模型，下载地址：
-  
+  百度网盘：链接：https://pan.baidu.com/s/1fKeHOhWQcMy5JYKHoArRtQ 提取码：qoyv 
+  Google drive:https://drive.google.com/drive/folders/1AHE_K3TglK-W1VqWcRT_HhMPvK5oNheJ?usp=sharing
 
 
 
