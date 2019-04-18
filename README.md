@@ -17,7 +17,7 @@ A example of Objection Detection using CNN
   
 3 如果你想直接使用我们训练好的模型，下载地址：
   百度网盘：链接：https://pan.baidu.com/s/1fKeHOhWQcMy5JYKHoArRtQ 提取码：qoyv 
-  Google drive:https://drive.google.com/file/d/1KCVvXJ5lmYPOalPRtZCT09Ien5UGWJHV/view?usp=sharing
+  Google Drive:https://drive.google.com/file/d/1KCVvXJ5lmYPOalPRtZCT09Ien5UGWJHV/view?usp=sharing
 
 
 
