@@ -12,7 +12,6 @@ from keras.layers import Conv2D, MaxPooling2D
 import os
 from sklearn.model_selection import train_test_split
 
-
 times=1
 epochs =50
 batch_size = 8
@@ -32,21 +31,13 @@ def robust_data(data,times=1,mean=0,deviation=1,max=255,min=0):
 
 data=np.zeros(shape=(305,312,416,3),dtype=np.uint8)
 for i in range(0,176):
-    imgname='train_mini/'+str(i)+'.jpg'
+    imgname='data/'+str(i)+'.jpg'
     img=cv2.imread(imgname)
     img=np.array(img)
     data[i]=img
 data=robust_data(data,times=times,mean=0,deviation=40)
 data=np.array(data,dtype=np.uint8)
-# try:
-#     cv2.imshow('a',data[100])
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()
-#     cv2.imshow('a',data[405])
-#     cv2.waitKey(0)
-#     cv2.destroyAllWindows()
-# except:
-#     pass
+
 labels=pd.read_csv('labels_ordered.csv')
 labels=pd.get_dummies(labels,columns=['label'])
 labels=labels.drop(['number'],axis=1)
@@ -119,10 +110,8 @@ model.add(Dense(8,kernel_initializer=keras.initializers.RandomNormal(mean=0.0, s
 
 print(model.summary())
 
-# initiate RMSprop optimizer
 opt = keras.optimizers.Adam()
 
-# Let's train the model using RMSprop
 model.compile(loss='mse',
               optimizer=opt,
               metrics=['mse'])
@@ -132,7 +121,6 @@ x_test = x_test.astype('float32')
 x_train /= 255
 x_test /= 255
 
-# check whether model exists
 if os.path.exists('saved_models'):
     print('loading weight')
     model.load_weights('saved_models/keras_trained_model.h5')
