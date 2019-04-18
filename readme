@@ -11,9 +11,12 @@ An example of Object Detection using CNN
   keras
 
 2 文件说明：
-  data文件夹：我们使用的数据
+  data文件夹:我们使用的数据
+  labels_ordered.csv:列名number,cx,cy,w,h,label，分别表示 图片编号，水平中心坐标，竖直中心坐标，图片宽，图片高，目标朝向。
+      目标朝向中 1：上，2：左，3：下，4：右
   train.py: 训练使用的代码，在此之前，我们已经训练好了一个模型，你可以直接使用它。
   predict.py: 如果你已经训练好了模型，或者直接使用我们的模型，那么你可以运行该程序查看效果。
+  
   
 3 如果你想直接使用我们训练好的模型，下载地址：
   百度网盘：链接：https://pan.baidu.com/s/1fKeHOhWQcMy5JYKHoArRtQ 提取码：qoyv 
